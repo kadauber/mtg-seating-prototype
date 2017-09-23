@@ -1,6 +1,6 @@
 # MTG Seating Prototype
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
+The MTG Seating app was created by Kimberly Dauber for the MIT Musical Theater Guild. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
 ## Development server
 
