@@ -25,13 +25,14 @@ The current state of this app comprises the bulk of the next iteration. However,
   * at least automate reservation information input after reservations are closed
   * preferably live update the reservation information as reservations come in
   * ideally completely replace the current reservations system (stretch goal)
-* Add a "front of house" mode, so that as front of house I can
-  * calculate ticket prices
-  * track which seats have been sold and which are still available
-  * record how much money we should have made (all transactions are cash)
-* Add a "theatergoer" mode, so that as an audience member I can 
-  * see my reservation and the seats I have been assigned
-  * update or cancel my reservation
-* Add a "cast and crew" mode, so that as a cast or crew member I can mark my friends' and family's reservations as complimentary "comp" tickets
+* Provide several user-type-based modes, including
+  * "Front of house" mode, so that as front of house I can
+    * calculate ticket prices
+    * track which seats have been sold and which are still available
+    * record how much money we should have made (all transactions are cash)
+  * "Theatergoer" mode, so that as an audience member I can 
+    * see my reservation and the seats I have been assigned
+    * update or cancel my reservation
+  * "Cast and crew" mode, so that as a cast or crew member I can mark my friends' and family's reservations as complimentary "comp" tickets
 
 These are pretty big goals, but hopefully some of them will come about in the beta version, coming soon to my github. 
