@@ -1,4 +1,4 @@
-# Ng4Playground
+# MTG Seating Prototype
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
@@ -6,23 +6,32 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Raison d'etre
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+While running the front of house for the MIT Musical Theater Guild's 2017 production of Avenue Q, it was a pain to manually assign seats to people with reservations. We constantly forgot which seats were broken, had a difficult time keeping track of parties who needed handicapped seating, and even accidentally assigned the same seat to multiple people.
 
-## Build
+Later on during the production, I started messing around with an Angular 4 tutorial and realized that it could be pretty fun and useful to make a small web app to assist with seat assignment. This prototype is the result of about a week's work on the side, along with classes, our new production (Spamalot), and other extracurriculars. Parts of it are much cleaner than others (for instance, my-new-component is completely unused) because I simply wanted to get a prototype down fast.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Next iteration
 
-## Running unit tests
+The current state of this app comprises the bulk of the next iteration. However, major goals for future versions are to:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Provide venue management, so as an admin I can 
+  * update broken and handicapped seats
+  * add seats to a venue
+  * CRUD entire venues (stretch goal)
+* Provide production/show management, so that as an admin I can CRUD productions and shows for a production
+* Integrate with the current reservations system, meaning pull reservations information from the SQL database
+  * at least automate reservation information input after reservations are closed
+  * preferably live update the reservation information as reservations come in
+  * ideally completely replace the current reservations system (stretch goal)
+* Add a "front of house" mode, so that as front of house I can
+  * calculate ticket prices
+  * track which seats have been sold and which are still available
+  * record how much money we should have made (all transactions are cash)
+* Add a "theatergoer" mode, so that as an audience member I can 
+  * see my reservation and the seats I have been assigned
+  * update or cancel my reservation
+* Add a "cast and crew" mode, so that as a cast or crew member I can mark my friends' and family's reservations as complimentary "comp" tickets
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+These are pretty big goals, but hopefully some of them will come about in the beta version, coming soon to my github. 
