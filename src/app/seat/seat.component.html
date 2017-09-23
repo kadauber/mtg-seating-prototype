@@ -1,0 +1,5 @@
+<div [ngClass]="{ 'bad-seat': this.state === 0, 'open-seat': this.state === 1, 'assigned-seat': this.state === 2, 'marked-seat': this.state === 3 }"
+     [ngStyle]="{ 'width': width, 'visibility': seatID ? 'auto' : 'hidden' }" 
+     class="seat" [class.disabled]="disabled" [class.handicapped-seat]="handicapped">
+  {{ seatID }}
+</div>

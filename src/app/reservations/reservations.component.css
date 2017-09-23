@@ -1,0 +1,58 @@
+.reservations-table {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.reservations-row:hover {
+    background-color: gainsboro;
+}
+
+.selected-reservation {
+    margin: 20px 60px;
+}
+
+.sel-res-info {
+    padding: 5px 0;
+}
+
+.col-icons {
+    width: 5%;
+    text-align: center;
+}
+
+.col-name {
+    width: 30%;
+}
+
+.col-size {
+    width: 15%;
+}
+
+.col-seats {
+    width: 50%;
+}
+
+.too-many-seats {
+    background-color: lightcoral;
+}
+
+.enough-seats {
+    background-color: lightgreen;
+}
+
+.needs-seats {
+    background-color: moccasin;
+}
+
+.fa-exclamation {
+    color: red;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-circle-thin {
+    color: gold;
+    font-weight: bold;
+}

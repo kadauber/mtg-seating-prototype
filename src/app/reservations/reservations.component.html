@@ -1,0 +1,58 @@
+<div *ngIf="seatAssignmentsService.selectedPartyID" 
+  class="container selected-reservation" 
+  [class.too-many-seats]="seatAssignmentsService.hasTooManySeats(seatAssignmentsService.selectedPartyID)"
+  [class.enough-seats]="seatAssignmentsService.hasEnoughSeats(seatAssignmentsService.selectedPartyID)"
+  [class.needs-seats]="seatAssignmentsService.needsSeats(seatAssignmentsService.selectedPartyID)">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="sel-res-info">
+        <div><strong>Party</strong></div>
+        <div>{{ seatAssignmentsService.parties[seatAssignmentsService.selectedPartyID].name }}</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="sel-res-info">
+        <div><strong>Num. Remaining</strong></div>
+        <div>
+          {{ seatAssignmentsService.getNumberOfSeatsRemaining(seatAssignmentsService.selectedPartyID) }}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="sel-res-info">
+        <div>
+          <strong>Num. Assigned</strong>
+        </div>
+        <div>
+          {{ seatAssignmentsService.getNumberOfSeatsAssigned(seatAssignmentsService.selectedPartyID) }}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="sel-res-info">
+        <div><strong>Seats</strong></div>
+        <div>{{ formatSeats(seatAssignmentsService.selectedPartyID) }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table reservations-table">
+  <thead>
+    <tr>
+      <th class="col-icons"></th>
+      <th class="col-name">Party</th>
+      <th class="col-size">Size</th>
+      <th class="col-seats">Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let partyID of partyIDs">
+      <tr *ngIf="partyID !== seatAssignmentsService.selectedPartyID" class="reservations-row" (click)="selectReservation(partyID)">
+        <td class="col-icons"><i class="fa" [ngClass]="{ 'fa-exclamation': seatAssignmentsService.hasTooManySeats(partyID), 'fa-check': seatAssignmentsService.hasEnoughSeats(partyID), 'fa-circle-thin': seatAssignmentsService.needsSeats(partyID) }"></i></td>
+        <td class="col-name">{{ seatAssignmentsService.parties[partyID].name }}</td>
+        <td class="col-size">{{ seatAssignmentsService.parties[partyID].size }}</td>
+        <td class="col-seats">{{ formatSeats(partyID) }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

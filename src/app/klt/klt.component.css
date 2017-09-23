@@ -1,0 +1,12 @@
+.seat-section {
+    display: inline-block;
+    text-align: center;
+}
+
+.seat-section-right {
+    text-align: left;
+}
+
+.seat-section-left {
+    text-align: right;
+}

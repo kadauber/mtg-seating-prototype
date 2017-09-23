@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="seat-section seat-section-left">
+    <div *ngFor="let seatRow of leftSeats; let idx = index">
+      <app-seat *ngFor="let seat of seatRow" (click)="assignSeat(seat)" [seatID]="seat" [width]="getSeatWidth(seatRow.length, 250 - idx * 10)"
+        [state]="getSeatState(seat)" [disabled]="!this.seatAssignmentsService.selectedPartyID" [handicapped]="this.venuesService.isHandicappedSeat('klt', seat)"></app-seat>
+    </div>
+  </div>
+  <div class="seat-section">
+    <div *ngFor="let seatRow of centerSeats; let idx = index">
+      <app-seat *ngFor="let seat of seatRow" (click)="assignSeat(seat)" [seatID]="seat" [width]="getSeatWidth(seatRow.length, 400 - idx * 20)"
+        [state]="getSeatState(seat)" [disabled]="!this.seatAssignmentsService.selectedPartyID" [handicapped]="this.venuesService.isHandicappedSeat('klt', seat)"></app-seat>
+    </div>
+  </div>
+  <div class="seat-section seat-section-right">
+    <div *ngFor="let seatRow of rightSeats; let idx = index">
+      <app-seat *ngFor="let seat of seatRow" (click)="assignSeat(seat)" [seatID]="seat" [width]="getSeatWidth(seatRow.length, 250 - idx * 10)"
+        [state]="getSeatState(seat)" [disabled]="!this.seatAssignmentsService.selectedPartyID" [handicapped]="this.venuesService.isHandicappedSeat('klt', seat)"></app-seat>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <app-reservations></app-reservations>
+</div>

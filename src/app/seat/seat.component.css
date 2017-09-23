@@ -1,0 +1,82 @@
+.seat {
+    display: inline-block;
+    padding: 3px 0;
+    width: 40px;
+    text-align: center;
+    font-size: 10px;
+    user-select: none;
+    cursor: default;
+    margin-bottom: 2px;
+}
+
+/* Seat Properties */
+.bad-seat {
+    background-color: darkslategray;
+    border: solid black 1px;
+    color: white;
+}
+
+.bad-seat:hover {
+    background-color: darkslategray;
+    border: solid black 1px;
+    cursor: default;
+}
+
+/* Seat States */
+.open-seat {
+    border: solid white 1px;
+    background-color: lightgray;
+}
+
+.open-seat:hover {
+    background-color: lightgreen;
+    border: solid black 2px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.handicapped-seat {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.disabled {
+    background-color: aliceblue;
+    border-color: white;
+    color: darkgray;
+}
+
+.disabled:hover {
+    background-color: aliceblue;
+    border-color: white;
+    cursor: default;
+}
+
+.assigned-seat {
+    background-color: darkgreen;
+    border: solid black 1px;
+    color: white;
+    margin-bottom: 1px;
+    cursor: default;
+}
+
+.assigned-seat.handicapped-seat {
+    background-color: blue;
+}
+
+.marked-seat {
+    border: solid black 1px;
+    background-color: limegreen;
+    color: white;
+}
+
+.marked-seat:hover {
+    border: solid black 2px;
+    background-color: lightcoral;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.marked-seat.handicapped-seat {
+    background-color: dodgerblue;
+}
