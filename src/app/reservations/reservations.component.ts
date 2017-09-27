@@ -11,7 +11,10 @@ export class ReservationsComponent implements OnInit {
 
   partyIDs = [];
 
-  constructor(private seatAssignmentsService: SeatAssignmentsService) {
+  public seatAssignmentsService: SeatAssignmentsService;
+
+  constructor(private _seatAssignmentsService: SeatAssignmentsService) {
+    this.seatAssignmentsService = _seatAssignmentsService;
     this.partyIDs = this.seatAssignmentsService.getAllPartyIDs();
   }
 

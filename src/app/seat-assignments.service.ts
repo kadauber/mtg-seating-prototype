@@ -42,9 +42,21 @@ export class SeatAssignmentsService {
     return Object.keys(this.parties);
   }
 
+  getSelectedPartyName() {
+    return this.parties[this.selectedPartyID].name;
+  }
+
   getSelectedPartySeats() {
     return Object.keys(this.parties[this.selectedPartyID].seatList)
       .filter(seat => this.parties[this.selectedPartyID].seatList[seat]);
+  }
+
+  getPartyName(partyID) {
+    return this.parties[partyID].name;
+  }
+
+  getPartySize(partyID) {
+    return this.parties[partyID].size;
   }
 
   getPartySeats(partyID) {

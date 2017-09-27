@@ -7,7 +7,7 @@
     <div class="col-sm-3">
       <div class="sel-res-info">
         <div><strong>Party</strong></div>
-        <div>{{ seatAssignmentsService.parties[seatAssignmentsService.selectedPartyID].name }}</div>
+        <div>{{ seatAssignmentsService.getSelectedPartyName() }}</div>
       </div>
     </div>
     <div class="col-sm-3">
@@ -49,8 +49,8 @@
     <ng-container *ngFor="let partyID of partyIDs">
       <tr *ngIf="partyID !== seatAssignmentsService.selectedPartyID" class="reservations-row" (click)="selectReservation(partyID)">
         <td class="col-icons"><i class="fa" [ngClass]="{ 'fa-exclamation': seatAssignmentsService.hasTooManySeats(partyID), 'fa-check': seatAssignmentsService.hasEnoughSeats(partyID), 'fa-circle-thin': seatAssignmentsService.needsSeats(partyID) }"></i></td>
-        <td class="col-name">{{ seatAssignmentsService.parties[partyID].name }}</td>
-        <td class="col-size">{{ seatAssignmentsService.parties[partyID].size }}</td>
+        <td class="col-name">{{ seatAssignmentsService.getPartyName(partyID) }}</td>
+        <td class="col-size">{{ seatAssignmentsService.getPartySize(partyID) }}</td>
         <td class="col-seats">{{ formatSeats(partyID) }}</td>
       </tr>
     </ng-container>
